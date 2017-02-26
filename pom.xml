@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>blueocean-parent</artifactId>
+    <groupId>io.jenkins.blueocean</groupId>
+    <version>1.0.0-b25-SNAPSHOT</version>
+  </parent>
+
+  <name>BlueOcean :: Sauce Labs Results Widget</name>
+  <artifactId>sauce-ondemand-blueocean</artifactId>
+  <packaging>hpi</packaging>
+  <url>http://wiki.jenkins-ci.org/display/JENKINS/Sauce+OnDemand+Plugin</url>
+
+  <developers>
+    <developer>
+      <id>halkeye</id>
+      <name>Gavin Mogan</name>
+      <email>gavin@saucelabs.com</email>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.jenkins.blueocean</groupId>
+      <artifactId>blueocean</artifactId>
+      <version>1.0.0-b24</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>sauce-ondemand</artifactId>
+      <version>1.161-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>m.g.o-public</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </repository>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </repository>
+    <repository>
+      <id>saucelabs-repository</id>
+      <url>https://repository-saucelabs.forge.cloudbees.com/release</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+</project>
