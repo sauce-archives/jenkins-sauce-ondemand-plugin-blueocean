@@ -2,3 +2,6 @@
 extensions:
   - component: components/SauceLabsResultWidgetContainer
     extensionPoint: jenkins.pipeline.run.result
+  - component: components/SauceLabsResultWidgetContainer
+    extensionPoint: jenkins.test.result
+    dataType: hudson.tasks.test.TestResult

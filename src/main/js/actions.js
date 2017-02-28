@@ -9,7 +9,7 @@ export const ACTION_TYPES = keymirror({
 export const reducer = (state = {}, action) => {
     if (action.type === ACTION_TYPES.SET_SAUCE_RESULTS) {
         return Object.assign({}, state, {
-            sauceResults: action.payload.jobs,
+            sauceResults: action.payload,
         });
     }
     return state;
@@ -24,14 +24,14 @@ export const actions = {
             return Fetch.fetchJSON(url)
                 .then(data => dispatch({
                     type: ACTION_TYPES.SET_SAUCE_RESULTS,
-                    payload: data,
+                    payload: data.jobs,
                 }));
         };
     },
     resetSauceDetails() {
         return (dispatch) =>
             dispatch({
-                type: ACTION_TYPES.SET_TEST_RESULTS,
+                type: ACTION_TYPES.SET_SAUCE_RESULTS,
                 payload: null,
             });
     },
